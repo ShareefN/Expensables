@@ -1,4 +1,11 @@
 {
-  "name": "frontend",
-  "displayName": "frontend"
+  "expo": {
+    "name": "PerkyParker",
+    "slug": "PerkyParker",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "PerkyParker"
 }

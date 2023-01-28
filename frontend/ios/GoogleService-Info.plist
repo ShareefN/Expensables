@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>855224652062-pugrbmn7ii5t9po1efcm425afbr6846k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.855224652062-pugrbmn7ii5t9po1efcm425afbr6846k</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>855224652062-d25n9jpolpgplrgefpfb93b2t14ih9hr.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyASr3JQ0y4cPSIVDEMEvHCWq6edUWdHAUI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>855224652062</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.perkyparker</string>
+	<key>PROJECT_ID</key>
+	<string>payable-staging</string>
+	<key>STORAGE_BUCKET</key>
+	<string>payable-staging.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:855224652062:ios:2beeab220d2b329fd9390f</string>
+</dict>
+</plist>

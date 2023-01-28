@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "855224652062",
+    "project_id": "payable-staging",
+    "storage_bucket": "payable-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855224652062:android:bc34d8576cf1ca70d9390f",
+        "android_client_info": {
+          "package_name": "com.payables"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855224652062-6vir4boifcj9k47qkpg3e1thg7cdmaps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.payables",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "855224652062-an5hco4s5o8t6djpueedmsrgrm6au48g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.payables",
+            "certificate_hash": "f8dc7a8f9b994e65f7395e9b4519b81d56d900e9"
+          }
+        },
+        {
+          "client_id": "855224652062-kdmmsscosl3cif9icpi2eeum62hkpemg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvp1be2HLLVFzzl8Pt96yajT4SRY07QY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855224652062-kdmmsscosl3cif9icpi2eeum62hkpemg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "855224652062-pugrbmn7ii5t9po1efcm425afbr6846k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.perkyparker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
