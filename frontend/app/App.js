@@ -7,21 +7,19 @@ import AppNavigation from './navigation/index';
 import Toast from 'react-native-toast-message';
 import { Provider as PaperProvider } from 'react-native-paper';
 import Loadingindicator from './components/indicators/loading_indicator';
-import { checkVersion } from "react-native-check-version";
 import BottomUpModal from './components/modal/bottom_up_modal';
-import UpdateRequiered from './components/containers/update_required';
 
 export default function App() {
   const [content, setContent] = useState(null)
 
   useEffect(() => {
-    (async () => {
-      const version = await checkVersion();
+    // (async () => {
+    //   const version = await checkVersion();
 
-      if (version.needsUpdate) {
-        setContent(<UpdateRequiered close={() => setContent(null)} />)
-      }
-    })()
+    //   if (version.needsUpdate) {
+    //     setContent(<UpdateRequiered close={() => setContent(null)} />)
+    //   }
+    // })()
   }, [])
 
   return (

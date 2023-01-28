@@ -1,8 +1,7 @@
 import EncryptedStorage from 'react-native-encrypted-storage';
 import { USER_TOKEN_KEY } from "@env"
 import { dispatchAction } from './global_dispatch';
-import { clearUser } from '../features/user/userSlice';
-import { clearVehicles } from '../features/vehicles/vehiclesSlice';
+import { clearUser } from '../features/userSlice';
 
 export const storeUserToken = async (token) => {
     try {
@@ -22,6 +21,5 @@ export const retreiveUserToken = async () => {
 
 export const clearStorage = async () => {
     dispatchAction(clearUser());
-    dispatchAction(clearVehicles())
     return await EncryptedStorage.clear();
 }

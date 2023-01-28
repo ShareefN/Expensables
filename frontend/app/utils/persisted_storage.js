@@ -1,21 +1,6 @@
 import { USER_FIRST_LAUNCH, USER_FIRST_PARKING } from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export const setFirstLaunch = async () => {
-    try {
-        await AsyncStorage.setItem(USER_FIRST_LAUNCH, 'true')
-    } catch (e) {
-        console.log('Error saving first launch', e)
-    }
-}
-
-export const readFirstLaunch = async () => {
-    try {
-        return await AsyncStorage.getItem(USER_FIRST_LAUNCH)
-    } catch (e) {
-        console.log('Error reading first launch', e)
-    }
-}
 
 export const setFirstparking = async () => {
     try {

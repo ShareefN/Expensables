@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "PerkyParker",
-    "slug": "PerkyParker",
+    "name": "Expensables",
+    "slug": "Expensables",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "PerkyParker"
+  "name": "Expensables"
 }

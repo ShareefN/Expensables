@@ -8,7 +8,6 @@ import {
     useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import { primary, secondary } from '../../constants/theme';
-import { logEvent } from '../../controllers/firebase';
 
 const CELL_COUNT = 6;
 let interval;
@@ -38,7 +37,6 @@ export default function OtpValidation({ number, resend, submit }) {
 
     onResendOTP = () => {
         resend();
-        logEvent("resend_otp_event", { number })
         setCounter(60)
     }
 

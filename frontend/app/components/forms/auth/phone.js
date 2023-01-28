@@ -8,8 +8,8 @@ export default function PhoneAuthentication(props) {
 
     return (
         <View style={styles.container}>
-            <Text variant="displaySmall">Login</Text>
-            <Caption>Login using Mobile Phone, Ex: +971......</Caption>
+            <Text variant="displaySmall">Get Started!</Text>
+            <Caption>Login / Register using Mobile Phone, Ex: +971......</Caption>
             <PrimaryInput title="Mobile Number" action={(i) => props.change('phone', i)} type="phone-pad" value={props.phone} />
         </View>
     )

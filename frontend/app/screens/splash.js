@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import SplashLogo from '../assets/splash.svg';
 import { useDispatch } from 'react-redux';
-import { setLoading } from '../features/loading/loadingSlice';
+import { setLoading } from '../features/loadingSlice';
 
 function Splash() {
     const dispatch = useDispatch();

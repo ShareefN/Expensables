@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { setDispatch } from '../utils/global_dispatch';
 import { retreiveUserToken } from '../utils/store_encryption';
-import { readFirstLaunch } from '../utils/persisted_storage';
-import { getUser } from '../controllers/user';
+
+import { user } from '../controllers/user';
+import { getCategories } from '../controllers/categories';
+
 import { initInstance } from '../api/private';
-import { selectIsLoggedIn } from '../features/user/userSlice';
-import { start } from '../features/guide/guideSlice';
+import { selectIsLoggedIn } from '../features/userSlice';
 
 import Splash from '../screens/splash';
 
@@ -28,13 +29,11 @@ function AppNavigation() {
         (async () => {
             let _token = await retreiveUserToken();
 
-            let _firstLaunch = await readFirstLaunch();
-
-            if (!_firstLaunch) dispatch(start())
-
             if (_token) {
+                // Todo: Update this block to a promise.all waterfall, create it in a seperate controller
                 await initInstance(JSON.parse(_token));
-                return await getUser(() => setLoading(false));
+                await user();
+                await getCategories()
             }
 
             setTimeout(() => {

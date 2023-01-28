@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import { useSelector } from 'react-redux';
-import { selectLoading } from '../../features/loading/loadingSlice';
+import { selectLoading } from '../../features/loadingSlice';
 import { primary, button_background } from '../../constants/theme';
 
 export default function Loadingindicator(props) {
