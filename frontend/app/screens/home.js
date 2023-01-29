@@ -1,35 +1,38 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
-import { routes } from '../constants/routes';
+import { View } from 'react-native';
 import { styles } from '../constants/styles';
-import ConfirmationDialog from '../components/dialog/confirmation_dialog';
 import BottomUpModal from '../components/modal/bottom_up_modal';
-import { useDispatch, useSelector } from 'react-redux';
-import { setLoading, selectLoading } from '../features/loadingSlice';
-import { errorToast } from '../components/toast/toast';
-import { selectUser } from '../features/userSlice';
-import TotalSpending from '../components/containers/total_spending';
+import CollectionButton from '../components/buttons/collection_button';
+import AvatarButton from '../components/buttons/avatar_button';
+import Expenses from '../components/containers/expenses';
+import { FAB } from 'react-native-paper';
+import { getCollections } from '../controllers/collections';
+import Colelctions from '../components/containers/collections';
 
-export default function Home({ navigation }) {
-    const loading = useSelector(selectLoading);
-    const user = useSelector(selectUser);
-    const dispatch = useDispatch();
+export default function Home() {
 
     const [content, setContent] = useState(null)
-    const [dialogContent, setDialogContent] = useState({
-        visible: false,
-        title: null,
-        message: null,
-        action: null,
-        dismiss: null
-    });
 
-    console.log(user);
+    const onCollectionPress = async () => {
+        await getCollections();
+        setContent(<Colelctions />)
+    }
+
     return (
         <View style={styles.container}>
-            <TotalSpending total={0} currency={user.currency ?? ''} />
-            <ConfirmationDialog content={dialogContent} />
+            <View style={[styles.row_container, styles.light_boarder_bottom]}>
+                <CollectionButton onpress={() => onCollectionPress()} />
+                <AvatarButton action={() => null} icon="account-outline" />
+            </View>
+
+            <Expenses />
             <BottomUpModal content={content} close={() => setContent(null)} />
+            <FAB
+                icon="plus"
+                style={styles.fab}
+                color="white"
+                onPress={() => console.log('Pressed')}
+            />
         </View>
     );
 }

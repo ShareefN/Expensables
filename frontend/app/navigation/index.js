@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDispatch } from '../utils/global_dispatch';
 import { retreiveUserToken } from '../utils/store_encryption';
 
-import { user } from '../controllers/user';
-import { getCategories } from '../controllers/categories';
+import { getAggregatedData } from '../controllers/aggregator'
 
 import { initInstance } from '../api/private';
 import { selectIsLoggedIn } from '../features/userSlice';
@@ -30,10 +29,8 @@ function AppNavigation() {
             let _token = await retreiveUserToken();
 
             if (_token) {
-                // Todo: Update this block to a promise.all waterfall, create it in a seperate controller
                 await initInstance(JSON.parse(_token));
-                await user();
-                await getCategories()
+                await getAggregatedData('out');
             }
 
             setTimeout(() => {

@@ -10,7 +10,6 @@ export const authenticate = (number, next) => {
     authenticateApi({ number }).then(async ({ data }) => {
         storeUserToken(data.token)
         await initInstance(data.token);
-        await user();
         if (next) next();
     }).catch((error) => {
         errorToast(errorMsg[error?.code]?.title ?? '', errorMsg[error?.code]?.content ?? '')

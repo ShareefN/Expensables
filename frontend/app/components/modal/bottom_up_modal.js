@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     content: {
         height: '80%',
         backgroundColor: '#fff',
-        borderTopRightRadius: 20,
-        borderTopLeftRadius: 20,
+        borderTopRightRadius: 10,
+        borderTopLeftRadius: 10,
         alignItems: 'center'
     },
     dead_bar: {

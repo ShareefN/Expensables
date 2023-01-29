@@ -11,7 +11,7 @@ export default function Terms({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Button icon="arrow-left" style={styles.back_button_container} onPress={() => navigation.goBack()} textColor={secondary} />
+            <Button icon="arrow-left" style={styles.align_start} onPress={() => navigation.goBack()} textColor={secondary} />
             <ScrollView style={styles.default_horizontal_padding}>
                 <RenderHtml
                     contentWidth={width}

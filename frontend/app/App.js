@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, KeyboardAvoidingView, StyleSheet, Platform } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import AppNavigation from './navigation/index';
@@ -11,16 +11,6 @@ import BottomUpModal from './components/modal/bottom_up_modal';
 
 export default function App() {
   const [content, setContent] = useState(null)
-
-  useEffect(() => {
-    // (async () => {
-    //   const version = await checkVersion();
-
-    //   if (version.needsUpdate) {
-    //     setContent(<UpdateRequiered close={() => setContent(null)} />)
-    //   }
-    // })()
-  }, [])
 
   return (
     <Provider store={store}>

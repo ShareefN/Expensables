@@ -1,19 +1,20 @@
-import { USER_FIRST_LAUNCH, USER_FIRST_PARKING } from '@env';
+import { COLLECTION_ID } from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export const setFirstparking = async () => {
+export const storeCollectionId = async (collectionId) => {
+    console.log('Storing collection Id: ', collectionId)
     try {
-        await AsyncStorage.setItem(USER_FIRST_PARKING, 'true')
+        await AsyncStorage.setItem(COLLECTION_ID, collectionId)
     } catch (e) {
-        console.log('Error saving first parking', e)
+        console.log('error saving collection Id', e)
     }
 }
 
-export const readFirstParking = async () => {
+export const readCollectionId = async () => {
     try {
-        return await AsyncStorage.getItem(USER_FIRST_PARKING);
+        return await AsyncStorage.getItem(COLLECTION_ID);
     } catch (e) {
-        console.log('Error reading first parking', e)
+        console.log('Error reading collection Id', e)
     }
 }
