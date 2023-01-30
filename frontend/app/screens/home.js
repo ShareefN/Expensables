@@ -8,14 +8,28 @@ import Expenses from '../components/containers/expenses';
 import { FAB } from 'react-native-paper';
 import { getCollections } from '../controllers/collections';
 import Colelctions from '../components/containers/collections';
+import CreateCollection from '../components/containers/create_collection';
+import { useSelector } from 'react-redux';
+import { selectCollections } from '../features/collectionSlice';
+import CreateExpense from '../components/containers/create_expense';
 
 export default function Home() {
+    const { collections } = useSelector(selectCollections);
 
     const [content, setContent] = useState(null)
 
     const onCollectionPress = async () => {
+        if (collections.length === 0) return onCreateCollectionPress();
         await getCollections();
-        setContent(<Colelctions />)
+        setContent(<Colelctions close={() => setContent(null)} onCreate={() => onCreateCollectionPress()} />)
+    }
+
+    const onCreateCollectionPress = async () => {
+        setContent(<CreateCollection close={() => setContent(null)} />)
+    }
+
+    const onCreateExpensePress = async () => {
+        setContent(<CreateExpense />)
     }
 
     return (
@@ -31,7 +45,7 @@ export default function Home() {
                 icon="plus"
                 style={styles.fab}
                 color="white"
-                onPress={() => console.log('Pressed')}
+                onPress={() => onCreateExpensePress()}
             />
         </View>
     );

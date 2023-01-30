@@ -5,7 +5,7 @@ let instance = null;
 
 export const initInstance = (token) => {
     instance = axios.create({
-        baseURL: BASE_URL,
+        baseURL: 'http://localhost:3030',
         timeout: 4000,
         headers: {
             authorization: `Bearer ${token}`
@@ -31,4 +31,8 @@ export const getExpensesApi = (collectionId, type) => {
 
 export const getCollectionsApi = () => {
     return instance.get('/collections/')
+}
+
+export const createColelctionApi = (payload) => {
+    return instance.post('/collections/', payload)
 }

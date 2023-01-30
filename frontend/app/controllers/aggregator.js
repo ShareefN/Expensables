@@ -13,7 +13,7 @@ export const getAggregatedData = async (type) => {
     if (type) query.type = type;
     if (collectionId) query.collectionId = collectionId;
 
-    const { data } = await aggregatorApi(query);
+    const { data } = await aggregatorApi(query)
 
     dispatchAction(setUser(data.user))
     dispatchAction(collections(data.collections))

@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { secondary, primary } from './theme';
+import { StyleSheet, Dimensions } from 'react-native';
+import { secondary, primary, input_background } from './theme';
 
 export const styles = StyleSheet.create({
     container: {
@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
     },
     default_horizontal_padding: {
         paddingHorizontal: 20
+    },
+    default_horizontal_padding_small: {
+        paddingHorizontal: 10
     },
     logo_container: {
         alignItems: 'center',
@@ -21,6 +24,9 @@ export const styles = StyleSheet.create({
     },
     dead_container: {
         marginVertical: 20
+    },
+    dead_container_small: {
+        marginVertical: 10,
     },
     title_text: {
         fontSize: 25
@@ -51,4 +57,22 @@ export const styles = StyleSheet.create({
         backgroundColor: primary,
         borderRadius: 10
     },
+    bottom_up_modal_fab: {
+        position: 'absolute',
+        margin: 16,
+        right: 10,
+        bottom: 70,
+        backgroundColor: secondary,
+        borderRadius: 10
+    },
+    full_width_height: {
+        width: '100%',
+        height: '100%',
+    },
+    light_background: {
+        backgroundColor: input_background
+    },
+    device_width: {
+        width: Dimensions.get('window').width - 40
+    }
 })  

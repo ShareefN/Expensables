@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSelector } from 'react-redux';
 import { selectCollections } from '../../features/collectionSlice';
 import { Button } from 'react-native-paper';
 import { styles } from '../../constants/styles';
 import TotalSpending from '../containers/total_spending';
 
-export default function CollectionButton({ onpress }) {
+export default function CollectionButton({ onpress, create }) {
     const { active } = useSelector(selectCollections);
 
     return (
@@ -26,7 +26,6 @@ const internalStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        width: Dimensions.get('window').width / 3.5,
 
     }
 })
